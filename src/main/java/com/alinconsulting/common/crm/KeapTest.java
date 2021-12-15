@@ -9,8 +9,8 @@ import org.apache.http.impl.client.HttpClients;
 
 public class KeapTest {
 
-    private static final String URL = "https://api-intg.infusiontest.com/crm/rest/v2/contacts/";
-    private static final String APIKEY = "KeapAK-43d60d18d32f731381aed6a6431a7ba3551795356e5263acca";
+    private static final String URL = "https://infusionsoft.app/crm/rest/v2/contacts/";
+    private static final String APIKEY = "KeapAK-03aefa105d9a9aa00fde1639789535d99b1ca39a4e6d78922f";
 
     public static void main(String[] args) {
         HttpClient client = HttpClients.custom().build();
@@ -20,7 +20,6 @@ public class KeapTest {
                 .setHeader("X-Keap-API-Key", APIKEY)
                 .build();
         try {
-            client.execute(request);
             HttpResponse resp = client.execute(request);
             System.out.println(resp.toString());
         }catch (Exception e){
