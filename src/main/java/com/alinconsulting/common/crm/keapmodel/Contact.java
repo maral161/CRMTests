@@ -25,5 +25,7 @@ public class Contact {
     public Company company;
     public int id;
     public String family_name;
+    public ArrayList<CustomFields> custom_fields;
+
 
 }
